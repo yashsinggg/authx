@@ -1,0 +1,32 @@
+{
+  "name": "authx-api",
+  "version": "1.0.50",
+  "scripts": {
+    "start": "bun run build && NODE_ENV=production bun run dist/server.js",
+    "dev": "NODE_ENV=development bun --watch src/index.ts",
+    "build": "bun build --target=bun src/index.ts --outfile=dist/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate": "bun drizzle-kit generate",
+    "push": "bun drizzle-kit push"
+  },
+  "dependencies": {
+    "@elysiajs/bearer": "^1.1.2",
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/cors": "^1.1.1",
+    "@elysiajs/jwt": "^1.1.1",
+    "@elysiajs/swagger": "^1.1.6",
+    "bcrypt": "^5.1.1",
+    "drizzle-orm": "^0.37.0",
+    "elysia": "latest",
+    "http-status-codes": "^2.3.0",
+    "logestic": "^1.2.4",
+    "pg": "^8.13.1",
+    "zod-validation-error": "^3.4.0"
+  },
+  "devDependencies": {
+    "@types/pg": "^8.11.10",
+    "bun-types": "latest",
+    "drizzle-kit": "^0.29.1"
+  },
+  "module": "src/index.js"
+}
