@@ -37,7 +37,16 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.crowwd.expo"
+      "bundleIdentifier": "com.crowwd.expo",
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.224100756216-k1s6b8me5jap48bkpot60muunrocca3e"
+            ]
+          }
+        ]
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -54,6 +63,12 @@
         "projectId": "f8730107-2a5e-45d7-aa2b-e625952dae32"
       }
     },
-    "owner": "crowwd"
+    "owner": "crowwd",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/f8730107-2a5e-45d7-aa2b-e625952dae32"
+    }
   }
 }

@@ -7,7 +7,7 @@ export default function Layout() {
         name="onboarding-screen"
         options={{
           headerShown: true,
-          title: 'Auth',
+          title: 'Authentication',
         }}
       />
     </Stack>

@@ -43,9 +43,9 @@ export function SessionProvider(props: React.PropsWithChildren<{}>) {
   // google oauth keys
   const [request, response, promptAsync] = Google.useAuthRequest({
     androidClientId: '224100756216-gcfhthrul7nk6sdsflejs9e2r0r34nm5.apps.googleusercontent.com',
-    iosClientId: '224100756216-k1s6b8me5jap48bkpot60muunrocca3e.apps.googleusercontent.com',
-    clientId: '845922293689-dh5bdfd4knvng8k508d3tsmuat4dtk4s.apps.googleusercontent.com',
-    webClientId: '224100756216-plnofum01thj47k4qkeufb532ibpmnqb.apps.googleusercontent.com',
+    iosClientId: '224100756216-uhh33gbpp62vhug1fm2j2isal5r7llgf.apps.googleusercontent.com',
+    clientId: '224100756216-tcstlvush76uloccfpir45ka67i57t8p.apps.googleusercontent.com',
+    webClientId: '224100756216-tcstlvush76uloccfpir45ka67i57t8p.apps.googleusercontent.com',
   });
 
   useEffect(() => {
@@ -53,15 +53,17 @@ export function SessionProvider(props: React.PropsWithChildren<{}>) {
       const idToken = response.authentication?.idToken;
       const accessToken = response.authentication?.accessToken;
 
+      console.log('responseeeeee:', response);
+
       // Use the fetchGoogleLogin function from api.js
-      console.log('idToken:', idToken);
+      console.log('idTokennnnnnnnn:', idToken);
       fetchGoogleLogin(idToken as string)
         .then(async (response) => {
           if (response.status === 200 && response.data) {
             if (!response.data.isOfficialNameSet || !response.data.isAnonymousNameSet) {
               setTimeout(() => {
                 router.replace({
-                  pathname: '/(drawer)/(tabs)',
+                  pathname: '/(app)/(drawer)/(tabs)',
                   params: {
                     isThisOnBoardingFlow: 'true',
                   },
@@ -69,7 +71,7 @@ export function SessionProvider(props: React.PropsWithChildren<{}>) {
               }, 500);
             } else {
               setTimeout(() => {
-                router.replace('/(auth)/community-guidelines');
+                router.replace('/(auth)/onboarding-screen');
               }, 500);
             }
 
@@ -96,7 +98,7 @@ export function SessionProvider(props: React.PropsWithChildren<{}>) {
           console.log('Error:', error);
           handleSignOut();
           setTimeout(() => {
-            router.replace('/(auth)/404-screen');
+            router.replace('/(auth)/onboarding-screen');
           }, 500);
         });
     }
