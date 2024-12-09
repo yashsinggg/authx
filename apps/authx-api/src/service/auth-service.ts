@@ -5,7 +5,7 @@ import { error } from 'elysia';
 import { db } from '../database';
 import { users } from '../database/models/user-model';
 import { sessions } from '../database/models/session-model';
-import bcrypt from 'bcrypt';
+// import bcrypt from 'bcrypt';
 
 export async function signup(email: string, password: string, jwt: any, refreshJwt: any) {
   // Check if user already exists
@@ -16,7 +16,10 @@ export async function signup(email: string, password: string, jwt: any, refreshJ
     throw error(StatusCodes.BAD_REQUEST, 'User already exists');
   }
 
-  const hashedPassword = await bcrypt.hash(password, 10);
+  const hashedPassword = await Bun.password.hash(password, {
+    algorithm: "bcrypt",
+    cost: 10,
+  });
   const newUser = (
     await db.insert(users).values({ email, passwordhash: hashedPassword }).returning()
   )[0];
@@ -55,7 +58,7 @@ export async function login(email: string, password: string, jwt: any, refreshJw
     throw error(StatusCodes.UNAUTHORIZED, 'Invalid email or password');
   }
 
-  const isValid = await bcrypt.compare(password, user.passwordhash);
+  const isValid = await Bun.password.verify(password, user.passwordhash);
   if (!isValid) {
     throw error(StatusCodes.UNAUTHORIZED, 'Invalid email or password');
   }

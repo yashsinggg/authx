@@ -36,6 +36,12 @@ COPY --from=prerelease /usr/src/app/.env .env
 USER root
 RUN apt-get update && apt-get install -y postgresql postgresql-contrib && rm -rf /var/lib/apt/lists/*
 
+# Locate the initdb binary and set PATH
+RUN PG_BIN_PATH=$(ls -d /usr/lib/postgresql/*/bin | head -n 1) \
+    && echo "PostgreSQL binaries located at $PG_BIN_PATH" \
+    && ln -s $PG_BIN_PATH/initdb /usr/bin/initdb \
+    && ln -s $PG_BIN_PATH/pg_ctl /usr/bin/pg_ctl
+
 # Set up PostgreSQL data directory
 RUN mkdir -p /var/lib/postgresql/data && chown -R postgres:postgres /var/lib/postgresql
 USER postgres
