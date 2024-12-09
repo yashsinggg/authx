@@ -1,0 +1,67 @@
+{
+  "i": "challenge-0008",
+  "n": "00000000-0000-0000-0000-000000000000",
+  "rs": [
+    "requested_scope-0008_1"
+  ],
+  "ra": [
+    "requested_audience-0008_1"
+  ],
+  "ls": true,
+  "s": "subject-0008",
+  "oc": {
+    "display": "display-0008"
+  },
+  "r": "http://request/0008",
+  "si": "auth_session-0008",
+  "lv": "verifier-0008",
+  "lc": "csrf-0008",
+  "li": null,
+  "ia": "0001-01-01T00:00:00Z",
+  "q": 128,
+  "lr": true,
+  "lf": 8,
+  "a": "acr-0008",
+  "fs": "force_subject_id-0008",
+  "ct": {
+    "context": "0008"
+  },
+  "lu": true,
+  "le": {
+    "error": "",
+    "error_description": "",
+    "error_hint": "",
+    "status_code": 0,
+    "error_debug": "",
+    "valid": false
+  },
+  "la": null,
+  "cc": "challenge-0008",
+  "cs": true,
+  "cv": "verifier-0008",
+  "cr": "csrf-0008",
+  "gs": [
+    "granted_scope-0008_1"
+  ],
+  "ga": [
+    "granted_audience-0008_1"
+  ],
+  "ce": true,
+  "cf": 8,
+  "ch": null,
+  "cw": true,
+  "cx": {
+    "error": "",
+    "error_description": "",
+    "error_hint": "",
+    "status_code": 0,
+    "error_debug": "",
+    "valid": false
+  },
+  "st": {
+    "session_id_token-0008": "0008"
+  },
+  "sa": {
+    "session_access_token-0008": "0008"
+  }
+}

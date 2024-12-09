@@ -1,0 +1,16 @@
+linters:
+  enable:
+    - gosec
+    - errcheck
+    - gosimple
+    - bodyclose
+    - staticcheck
+    - goimports
+  disable:
+    - ineffassign
+    - unused
+
+issues:
+  exclude-files:
+    - ".+_test.go"
+    - ".+_test_.+.go"

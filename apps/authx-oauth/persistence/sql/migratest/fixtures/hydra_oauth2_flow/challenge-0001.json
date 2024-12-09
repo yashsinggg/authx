@@ -1,0 +1,57 @@
+{
+  "i": "challenge-0001",
+  "n": "00000000-0000-0000-0000-000000000000",
+  "rs": [
+    "requested_scope-0001_1"
+  ],
+  "ls": true,
+  "s": "subject-0001",
+  "oc": {
+    "display": "display-0001"
+  },
+  "r": "http://request/0001",
+  "lv": "verifier-0001",
+  "lc": "csrf-0001",
+  "li": null,
+  "ia": "0001-01-01T00:00:00Z",
+  "q": 128,
+  "lr": true,
+  "lf": 1,
+  "a": "acr-0001",
+  "ct": {},
+  "lu": true,
+  "le": {
+    "error": "",
+    "error_description": "",
+    "error_hint": "",
+    "status_code": 0,
+    "error_debug": "",
+    "valid": false
+  },
+  "la": null,
+  "cc": "challenge-0001",
+  "cs": true,
+  "cv": "verifier-0001",
+  "cr": "csrf-0001",
+  "gs": [
+    "granted_scope-0001_1"
+  ],
+  "ce": true,
+  "cf": 1,
+  "ch": null,
+  "cw": true,
+  "cx": {
+    "error": "",
+    "error_description": "",
+    "error_hint": "",
+    "status_code": 0,
+    "error_debug": "",
+    "valid": false
+  },
+  "st": {
+    "session_id_token-0001": "0001"
+  },
+  "sa": {
+    "session_access_token-0001": "0001"
+  }
+}
