@@ -13,7 +13,7 @@
     "lint": "eslint \"**/*.{js,jsx,ts,tsx}\" && prettier -c \"**/*.{js,jsx,ts,tsx,json}\"",
     "format": "eslint \"**/*.{js,jsx,ts,tsx}\" --fix && prettier \"**/*.{js,jsx,ts,tsx,json}\" --write",
     "web": "expo start --web",
-    "build:web" : "expo export -p web"
+    "build:web": "expo export -p web"
   },
   "dependencies": {
     "@expo/vector-icons": "^14.0.4",
@@ -24,12 +24,15 @@
     "@tamagui/react-native-media-driver": "^1.117.2",
     "@tamagui/shorthands": "^1.117.2",
     "@tamagui/themes": "^1.117.2",
+    "axios": "^1.7.9",
     "expo": "^52.0.11",
+    "expo-auth-session": "^6.0.1",
     "expo-constants": "^17.0.3",
     "expo-dev-client": "^5.0.4",
     "expo-font": "^13.0.1",
     "expo-linking": "^7.0.3",
     "expo-router": "^4.0.9",
+    "expo-secure-store": "^14.0.0",
     "expo-status-bar": "^2.0.0",
     "expo-system-ui": "^4.0.4",
     "expo-web-browser": "^14.0.1",

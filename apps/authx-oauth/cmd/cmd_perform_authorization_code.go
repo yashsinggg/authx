@@ -107,8 +107,7 @@ var tokenUserWelcome = template.Must(template.New("").Parse(`<html>
 <p>This is an example app which emulates an OAuth 2.0 consumer application. Usually, this would be your web or mobile
     application and would use an <a href="https://oauth.net/code/">OAuth 2.0</a> or <a href="https://oauth.net/code/">OpenID
         Connect</a> library.</p>
-<p>This example requests an OAuth 2.0 Access, Refresh, and OpenID Connect ID Token from the OAuth 2.0 Server (Ory
-    Hydra).
+<p>This example requests an OAuth 2.0 Access, Refresh, and OpenID Connect ID Token from the OAuth 2.0 Server (Authx).
     To initiate the flow, click the "Authorize Application" button.</p>
 <p><a href="{{ .URL }}">Authorize application</a></p>
 </body>
